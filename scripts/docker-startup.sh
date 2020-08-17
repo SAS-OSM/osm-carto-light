@@ -51,9 +51,6 @@ EOF
   --tag-transform-script openstreetmap-carto.lua \
   $OSM2PGSQL_DATAFILE
 
-  # fix line endings on Windows
-  dos2unix scripts/*.py
-  
   # Downloading needed shapefiles
   scripts/get-external-data.py
   ;;
