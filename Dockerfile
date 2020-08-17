@@ -4,7 +4,7 @@ FROM ubuntu:bionic
 RUN apt-get update && apt-get install --no-install-recommends -y \
     ca-certificates curl gnupg postgresql-client python3 python3-distutils \
     fonts-hanazono fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted \
-    mapnik-utils nodejs npm ttf-unifont unzip dos2unix && rm -rf /var/lib/apt/lists/*
+    mapnik-utils nodejs npm ttf-unifont unzip && rm -rf /var/lib/apt/lists/*
 
 # Kosmtik with plugins, forcing prefix to /usr because bionic sets
 # npm prefix to /usr/local, which breaks the install
@@ -25,9 +25,6 @@ RUN kosmtik plugins --install kosmtik-overpass-layer \
 RUN mkdir -p /openstreetmap-carto
 WORKDIR /openstreetmap-carto
 
-# Fix line endings on Windows.
-RUN dos2unix scripts/*.py && apt-get --purge remove -y dos2unix
-
 USER 1000
-
 CMD sh scripts/docker-startup.sh kosmtik
+
