@@ -24,6 +24,7 @@ services:
     environment:
       - PG_WORK_MEM
       - PG_MAINTENANCE_WORK_MEM
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
   import:
     image: import:v1
     build:
