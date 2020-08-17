@@ -26,7 +26,7 @@ RUN mkdir -p /openstreetmap-carto
 WORKDIR /openstreetmap-carto
 
 # Fix line endings on Windows.
-RUN dos2unix script/*.py && apt-get --purge remove -y dos2unix
+RUN dos2unix scripts/*.py && apt-get --purge remove -y dos2unix
 
 USER 1000
 
