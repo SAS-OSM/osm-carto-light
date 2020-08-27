@@ -7,6 +7,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - .:/openstreetmap-carto
+      - openstreetmap-data:/var/lib/postgresql/data
     depends_on:
       - db
     ports:
@@ -29,6 +30,8 @@ services:
       - "POSTGRES_HOST_AUTH_METHOD=trust"
     sysctls:
       kernel.shmmax: 268435456
+    volumes:
+      - openstreetmap-data:/var/lib/postgresql/data      
   import:
     image: import:v1
     build:
@@ -36,6 +39,7 @@ services:
       dockerfile: Dockerfile.import
     volumes:
       - .:/openstreetmap-carto
+      - openstreetmap-data:/var/lib/postgresql/data
     depends_on:
       - db
     environment:
@@ -51,3 +55,6 @@ services:
     sysctls:
       kernel.shmmax: 268435456      
 
+volumes:
+   openstreetmap-data:
+    external: true

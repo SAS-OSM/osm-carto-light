@@ -26,7 +26,7 @@ import)
   if [ ! -e ".env" ]; then
     cat > .env <<EOF
 # Environment settings for importing to a Docker container database
-PG_WORK_MEM=${PG_WORK_MEM:-16MB}
+PG_WORK_MEM=${PG_WORK_MEM:-32MB}
 PG_MAINTENANCE_WORK_MEM=${PG_MAINTENANCE_WORK_MEM:-256MB}
 PG_SHARED_BUFFERS=${PG_SHARED_BUFFERS:-128MB}
 PG_AUTOVACUUM=${PG_SHARED_BUFFERS:OFF}
