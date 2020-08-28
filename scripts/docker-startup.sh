@@ -22,24 +22,6 @@ import)
   psql -d gis -c 'CREATE EXTENSION IF NOT EXISTS postgis;' && \
   psql -d gis -c 'CREATE EXTENSION IF NOT EXISTS hstore;' && \
 
-  # Creating default import settings file editable by user and passing values for osm2pgsql
-  if [ ! -e ".env" ]; then
-    cat > .env <<EOF
-# Environment settings for importing to a Docker container database
-PG_WORK_MEM=${PG_WORK_MEM:-32MB}
-PG_MAINTENANCE_WORK_MEM=${PG_MAINTENANCE_WORK_MEM:-256MB}
-PG_SHARED_BUFFERS=${PG_SHARED_BUFFERS:-128MB}
-PG_AUTOVACUUM=${PG_SHARED_BUFFERS:OFF}
-OSM2PGSQL_CACHE=${OSM2PGSQL_CACHE:-512}
-OSM2PGSQL_NUMPROC=${OSM2PGSQL_NUMPROC:-1}
-OSM2PGSQL_DATAFILE=${OSM2PGSQL_DATAFILE:-data.osm.pbf}
-EOF
-    chmod a+rw .env
-    export OSM2PGSQL_CACHE=${OSM2PGSQL_CACHE:-512}
-    export OSM2PGSQL_NUMPROC=${OSM2PGSQL_NUMPROC:-1}
-    export OSM2PGSQL_DATAFILE=${OSM2PGSQL_DATAFILE:-data.osm.pbf}
-  fi
-
   # Importing data to a database
   osm2pgsql \
   --cache $OSM2PGSQL_CACHE \
@@ -65,7 +47,7 @@ kosmtik)
   export KOSMTIK_CONFIGPATH=".kosmtik-config.yml"
 
   # Starting Kosmtik
-  kosmtik serve project.mml --host 0.0.0.0
+  kosmtik serve $PROJECT_PATH --host 0.0.0.0
   # It needs Ctrl+C to be interrupted
   ;;
 

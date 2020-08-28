@@ -1,4 +1,4 @@
-version: '2.1'
+version: '2.4'
 
 services:
   kosmtik:
@@ -8,32 +8,27 @@ services:
       dockerfile: Dockerfile
     volumes:
       - .:/openstreetmap-carto
-      - openstreetmap-data:/var/lib/postgresql/data
+      - openstreetmap-data:${PGDATA}
     depends_on:
       db:
         condition: service_healthy
     ports:
-      - "127.0.0.1:6789:6789"
-    environment:
-      - PGHOST=db
-      - PGUSER=postgres
+      - "${KOSMTIKPORT}"
+    env_file:
+      - project.env
   db:
     image: db:v1
     build:
       context: .
       dockerfile: Dockerfile.db
     ports:
-      - "127.0.0.1:5432:5432"
-    environment:
-      - PG_WORK_MEM
-      - PG_MAINTENANCE_WORK_MEM
-      - PG_SHARED_BUFFERS
-      - PG_AUTOVACUUM
-      - "POSTGRES_HOST_AUTH_METHOD=trust"
+      - "${PGPORT}"
+    env_file:
+      - project.env
     sysctls:
-      kernel.shmmax: 268435456
+      kernel.shmmax: ${PGSHMMAX}
     volumes:
-      - openstreetmap-data:/var/lib/postgresql/data
+      - openstreetmap-data:${PGDATA}      
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 10s
@@ -46,23 +41,18 @@ services:
       dockerfile: Dockerfile.import
     volumes:
       - .:/openstreetmap-carto
-      - openstreetmap-data:/var/lib/postgresql/data
+      - openstreetmap-data:${PGDATA}      
     depends_on:
       db:
         condition: service_healthy      
-    environment:
-      - PGHOST=db
-      - PGUSER=postgres
-      - PG_WORK_MEM
-      - PG_MAINTENANCE_WORK_MEM
-      - PG_SHARED_BUFFERS
-      - PG_AUTOVACUUM      
-      - OSM2PGSQL_CACHE
-      - OSM2PGSQL_NUMPROC
-      - OSM2PGSQL_DATAFILE
+    env_file:
+      - project.env
     sysctls:
-      kernel.shmmax: 268435456      
+      kernel.shmmax: ${PGSHMMAX}
 
 volumes:
-   openstreetmap-data:
-    external: true
+  openstreetmap-data:
+    external:
+      name: ${PGVOLUME}
+
+
