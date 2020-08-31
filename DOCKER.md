@@ -19,9 +19,9 @@ You need sufficient disk space of _several gigabytes_. Docker creates a disk ima
 If you are eager to get started, here is an overview over the necessary steps.
 Read on below to get the details.
 
-1. `git clone https://github.com/davidwkelley/openstreetmap-carto.git` to clone openstreetmap-carto repository into a directory on your host system. On Windows systems, append `--config core.autocrlf=input` to preserve Unix-style line endings.
+1. `git clone https://github.com/davidwkelley/openstreetmap-carto.git` to clone the openstreetmap-carto repository into a directory on your host system. On Windows systems, append `--config core.autocrlf=input` to preserve Unix-style line endings.
 2. `docker volume create --name=osm-data` to create an external volume to contain the database
-3. Download OpenStreetMap data in [PBF](https://wiki.openstreetmap.org/wiki/PBF_Format) format to a file `data.osm.pbf` and place it within the openstreetmap-carto directory (for example, some small area from [Geofabrik](https://download.geofabrik.de/)).
+3. Download OpenStreetMap data in [PBF](https://wiki.openstreetmap.org/wiki/PBF_Format) format to a file `data.osm.pbf`, and place it within the openstreetmap-carto directory (for example, some small area from [Geofabrik](https://download.geofabrik.de/)).
 4. `docker-compose up db` to start PostgreSQL running (only necessary the first time or when you change the data file)
 5. `docker-compose up import` to import the data (only necessary the first time or when you change the data file)
 6. `docker-compose up kosmtik` to run the style preview application. Wait for kosmtik to issue the log message `... [Core] Map ready`.
