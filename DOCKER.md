@@ -70,7 +70,7 @@ file in the project directory:
 
 <br/>Don't confuse the `project.env` file with the `.env` file. Variables
 defined in the `.env` file pertain only to `docker.compose.yml`, which declares to Docker Compose how to manage the containers. Variables defined
-in the `project.env` file pertain to the processes running *in* the containers. Furthermore, there's only `.env` file, whereas there is a `project.env` file for each project.
+in the `project.env` file pertain to the processes running *in* the containers. Furthermore, there's only one `.env` file, whereas there is a `project.env` file for each project.
 
 Depending on your machine and the size of the extract, the import can take a while. When it is finished, you should have the data necessary to render it with OpenStreetMap Carto.
 
