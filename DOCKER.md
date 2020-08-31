@@ -88,7 +88,7 @@ After startup is complete, you can browse to <http://localhost:6789> to view the
 
 The [HDM](https://github.com/hotosm/HDM-CartoCSS) rendering is a Carto project focusing on the [Humanitarian Data Model](https://wiki.openstreetmap.org/wiki/Humanitarian\_OSM\_Tags). The HDM style is found in the HDM-CartoCSS subdirectory of the openstreetmap-carto directory. If you'd like to test HDM style rendering, then:
 
-1. Specify the location of the HDM project by setting `PROJECTENV=./HDM-CartoCSS/project.env` in the `.env` file.
+1. Specify the location of the HDM project by setting `PROJECTENV=HDM-CartoCSS/project.env` in the `.env` file.
 2. Create an external volume for the HDM database, e.g. `hdm-data`.
 3. Specify the volume name in the `.env` file.
 4. Follow steps #3 and remaining in the [Quick start](#quick_start) section.
@@ -112,7 +112,7 @@ If you wish to create a separate named style, then follow these steps:
 1. Create a subdirectory, e.g. MyStyle.
 2. Copy these files/directories to MyStyle: `external-data.yml`, `openstreetmap-carto.lua`, `openstreetmap-carto.style`, `project.env`, `project.mml`, `style`, `symbols`.
 3. Specify `name: MyStyle` in `project.mml` in the subdirectory.
-4. Specify the location of the MyStyle project by setting `PROJECTENV=./MyStyle/project.env` in the `.env` file.
+4. Specify the location of the MyStyle project by setting `PROJECTENV=MyStyle/project.env` in the `.env` file.
 5. Create an external volume for the MyStyle database, or just reuse `osm-data`.
 6. Specify the volume name in the `.env` file.
 7. Follow steps #3 and remaining in the [Quick start](#quick_start) section.
