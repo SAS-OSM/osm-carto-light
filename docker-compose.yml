@@ -54,5 +54,3 @@ volumes:
   openstreetmap-data:
     external:
       name: ${PGVOLUME}
-
-
