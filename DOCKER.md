@@ -74,7 +74,7 @@ in the `project.env` file pertain to the processes running *in* the containers. 
 
 Depending on your machine and the size of the extract, the import can take a while. When it is finished, you should have the data necessary to render it with OpenStreetMap Carto.
 
-## Test default style rendering
+## Testing default style rendering
 
 After you have the necessary data available, you can start Kosmtik to produce a test rendering. For that you run `docker-compose up kosmtik` in the openstreetmap-carto directory. This starts a container with Kosmtik and also starts the PostgreSQL database container if it is not already running. The Kosmtik container is built the first time you run that command if it does not exist.
 At startup of the container, the script `scripts/docker-startup.sh` is invoked, which downloads necessary shapefiles with `scripts/get-external-data.py` (if they are not already present). Afterwards it runs Kosmtik. If you have to customize anything, you can do so in the script. The Kosmtik config file can be found in `.kosmtik-config.yml`.
@@ -84,7 +84,7 @@ The shapefile data that is downloaded is owned by the user with UID 1000. If you
 
 After startup is complete, you can browse to <http://localhost:6789> to view the output of Kosmtik. By pressing `Ctrl+C` on the command line, you can stop the container. The PostgreSQL database container is still running then (you can check with `docker ps`). If you want to stop the database container as well, you can do so by running `docker-compose stop db` in the openstreetmap-carto directory.  To stop and remove all running containers, say `docker-compose down`.
 
-## Test HDM-CartoCSS style rendering
+## Testing HDM-CartoCSS style rendering
 
 The [HDM](https://github.com/hotosm/HDM-CartoCSS) rendering is a Carto project focusing on the [Humanitarian Data Model](https://wiki.openstreetmap.org/wiki/Humanitarian\_OSM\_Tags). The HDM style is found in the HDM-CartoCSS subdirectory of the openstreetmap-carto directory. If you'd like to test HDM style rendering, then:
 
@@ -98,7 +98,7 @@ That's because the style defines the database schema, and the schemas for the
 default style and the HDM-CartoCSS style are incompatible. If you try to
 render `osm-data` with the HDM-CartoCSS style, you'll get PostgreSQL errors.
 
-## Roll your own style
+## Rolling your own style
 
 It's possible to create your own style. Because Carto CSS styles are complex,
 you should start with the default style rather than try to make a new style
