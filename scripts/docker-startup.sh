@@ -22,21 +22,36 @@ import)
   psql -d gis -c 'CREATE EXTENSION IF NOT EXISTS postgis;' && \
   psql -d gis -c 'CREATE EXTENSION IF NOT EXISTS hstore;' && \
 
-  # Importing data to a database
-  osm2pgsql \
-  --cache $OSM2PGSQL_CACHE \
-  --number-processes $OSM2PGSQL_NUMPROC \
-  --hstore \
-  --multi-geometry \
-  --database gis \
-  --slim \
-  --drop \
-  --style openstreetmap-carto.style \
-  --tag-transform-script openstreetmap-carto.lua \
-  $OSM2PGSQL_DATAFILE
+  # Importing data to a database  
+  if [ "${PROJECT_STYLE:-unset}" = "unset" ]
+    then
+      # No transforms
+      osm2pgsql \
+      --cache $OSM2PGSQL_CACHE \
+      --number-processes $OSM2PGSQL_NUMPROC \
+      --hstore \
+      --multi-geometry \
+      --database gis \
+      --slim \
+      --drop \
+      $OSM2PGSQL_DATAFILE
+    else
+      # Transforms
+      osm2pgsql \
+      --cache $OSM2PGSQL_CACHE \
+      --number-processes $OSM2PGSQL_NUMPROC \
+      --hstore \
+      --multi-geometry \
+      --database gis \
+      --slim \
+      --drop \
+      --style $PROJECT_PATH/$PROJECT_STYLE \
+      --tag-transform-script $PROJECT_PATH/$PROJECT_LUA \
+      $OSM2PGSQL_DATAFILE      
+    fi
 
   # Downloading needed shapefiles
-  scripts/get-external-data.py
+  scripts/get-external-data.py -c $PROJECT_PATH/$PROJECT_EXTDATA
   ;;
 
 kosmtik)
@@ -47,7 +62,7 @@ kosmtik)
   export KOSMTIK_CONFIGPATH=".kosmtik-config.yml"
 
   # Starting Kosmtik
-  kosmtik serve $PROJECT_PATH --host 0.0.0.0
+  kosmtik serve $PROJECT_PATH/$PROJECT_MML --host 0.0.0.0
   # It needs Ctrl+C to be interrupted
   ;;
 

@@ -15,7 +15,7 @@ services:
     ports:
       - "${KOSMTIKPORT}"
     env_file:
-      - project.env
+      - ${PROJECTENV}
   db:
     image: db:v1
     build:
@@ -24,7 +24,7 @@ services:
     ports:
       - "${PGPORT}"
     env_file:
-      - project.env
+      - ${PROJECTENV}
     sysctls:
       kernel.shmmax: ${PGSHMMAX}
     volumes:
@@ -46,7 +46,7 @@ services:
       db:
         condition: service_healthy      
     env_file:
-      - project.env
+      - ${PROJECTENV}    
     sysctls:
       kernel.shmmax: ${PGSHMMAX}
 
