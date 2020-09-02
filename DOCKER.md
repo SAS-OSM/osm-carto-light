@@ -94,7 +94,7 @@ openstreetmap-carto directory. If you'd like to test grayscale style rendering,
 then:
 
 1. Specify the location of the OSM-CartoBW project by setting `PROJECTENV=OSM-CartoBW/project.env` in the `.env` file, and by setting `PROJECT_PATH=OSM-CartoBW` in the subdirectory `project.env` file.
-2. Follow steps #4 and remaining in the [Quick start](#quick_start) section.
+2. Follow steps #6 and remaining in the [Quick start](#quick_start) section.
 
 ## Testing HDM-CartoCSS style rendering
 
