@@ -84,11 +84,23 @@ The shapefile data that is downloaded is owned by the user with UID 1000. If you
 
 After startup is complete, you can browse to <http://localhost:6789> to view the output of Kosmtik. By pressing `Ctrl+C` on the command line, you can stop the container. The PostgreSQL database container is still running then (you can check with `docker ps`). If you want to stop the database container as well, you can do so by running `docker-compose stop db` in the openstreetmap-carto directory.  To stop and remove all running containers, say `docker-compose down`.
 
+## Testing OSM Black and White style rendering
+
+The OpenStreetMap Carto Black and White style is a grayscale style derived from
+the default style. As such, it works fine with external volume `osm-data`.
+
+This style is found in the OSM-CartoBW subdirectory of the
+openstreetmap-carto directory. If you'd like to test grayscale style rendering,
+then:
+
+1. Specify the location of the OSM-CartoBW project by setting `PROJECTENV=OSM-CartoBW/project.env` in the `.env` file, and by setting `PROJECT_PATH=OSM-CartoBW` in the subdirectory `project.env` file.
+2. Follow steps #4 and remaining in the [Quick start](#quick_start) section.
+
 ## Testing HDM-CartoCSS style rendering
 
 The [HDM](https://github.com/hotosm/HDM-CartoCSS) rendering is a Carto project focusing on the [Humanitarian Data Model](https://wiki.openstreetmap.org/wiki/Humanitarian\_OSM\_Tags). The HDM style is found in the HDM-CartoCSS subdirectory of the openstreetmap-carto directory. If you'd like to test HDM style rendering, then:
 
-1. Specify the location of the HDM project by setting `PROJECTENV=HDM-CartoCSS/project.env` in the `.env` file.
+1. Specify the location of the HDM project by setting `PROJECTENV=HDM-CartoCSS/project.env` in the `.env` file, and by setting `PROJECT_PATH=HDM-CartoCSS` in the subdirectory `project.env` file.
 2. Create an external volume for the HDM database, e.g. `hdm-data`.
 3. Specify the volume name in the `.env` file.
 4. Follow steps #3 and remaining in the [Quick start](#quick_start) section.
