@@ -112,7 +112,7 @@ If you wish to create a separate named style, then follow these steps:
 1. Create a subdirectory, e.g. MyStyle.
 2. Copy these files/directories to MyStyle: `external-data.yml`, `openstreetmap-carto.lua`, `openstreetmap-carto.style`, `project.env`, `project.mml`, `style`, `symbols`.
 3. Specify `name: MyStyle` in `project.mml` in the subdirectory.
-4. Specify the location of the MyStyle project by setting `PROJECTENV=MyStyle/project.env` in the `.env` file.
+4. Specify the location of the MyStyle project by setting `PROJECTENV=MyStyle/project.env` in the `.env` file, and by setting `PROJECT_PATH=MyStyle` in the subdirectory `project.env` file.
 5. Create an external volume for the MyStyle database, or just reuse `osm-data`.
 6. Specify the volume name in the `.env` file.
 7. Follow steps #3 and remaining in the [Quick start](#quick_start) section.
