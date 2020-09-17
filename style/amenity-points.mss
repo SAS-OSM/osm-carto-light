@@ -6,7 +6,7 @@
 @transportation-text: #0066ff;
 @accommodation-icon: @transportation-icon;
 @accommodation-text: @transportation-text;
-@airtransport: #8461C4; //also ferry_terminal
+@airtransport: #b4b4b4; //also ferry_terminal
 @health-color: #BF0000;
 @amenity-brown: #734a08;
 @gastronomy-icon: #C77400;
@@ -2137,30 +2137,30 @@
   [feature = 'landuse_recreation_ground'],
   [feature = 'landuse_village_green'],
   [feature = 'leisure_garden'],
-  [feature = 'landuse_quarry'],
+//[feature = 'landuse_quarry'],
   [feature = 'landuse_vineyard'],
   [feature = 'landuse_orchard'],
-  [feature = 'landuse_plant_nursery'],
+//[feature = 'landuse_plant_nursery'],
   [feature = 'landuse_cemetery'],
   [feature = 'amenity_grave_yard'],
-  [feature = 'landuse_residential'],
+//[feature = 'landuse_residential'],
   [feature = 'landuse_meadow'],
   [feature = 'natural_grassland'],
   [feature = 'landuse_grass'],
-  [feature = 'landuse_allotments'],
+//[feature = 'landuse_allotments'],
   [feature = 'landuse_farmyard'],
   [feature = 'landuse_farmland'],
   [feature = 'landuse_greenhouse_horticulture'],
   [feature = 'shop'][shop = 'mall'][location != 'underground'],
   [feature = 'landuse_retail'],
-  [feature = 'landuse_industrial'],
+//[feature = 'landuse_industrial'],
   [feature = 'landuse_railway'],
   [feature = 'man_made_works'],
   [feature = 'man_made_water_works'],
   [feature = 'man_made_wastewater_plant'],
-  [feature = 'landuse_commercial'],
+//[feature = 'landuse_commercial'],
   [feature = 'landuse_brownfield'],
-  [feature = 'landuse_landfill'],
+//[feature = 'landuse_landfill'],
   [feature = 'landuse_construction'],
   [feature = 'landuse_salt_pond'],
   [feature = 'tourism_theme_park'],
