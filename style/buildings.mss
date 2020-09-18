@@ -11,13 +11,14 @@
 @entrance-normal: @building-line;
 
 #buildings {
-  [zoom >= 14] {
-    polygon-fill: @building-low-zoom;
+  [zoom >= 13] {
+    polygon-fill: #999999;
+    polygon-opacity: .25;
     polygon-clip: false;
-    [zoom >= 15] {
-      polygon-fill: @building-fill;
-      line-color: @building-line;
-      line-width: .75;
+    [zoom >= 17] {
+      line-color: #808080;
+      line-width: .7;
+      line-opacity: .25;
       line-clip: false;
     }
     [amenity = 'place_of_worship'],
