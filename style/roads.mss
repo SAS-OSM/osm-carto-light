@@ -364,11 +364,10 @@
     [feature = 'highway_trunk'],
     [feature = 'highway_primary'] {    
       [zoom >= 8] {
-        [zoom >= 8] { line-width: 2; line-opacity: 1; line-color: #f0d6ad }
-        [zoom >= 9] { line-width: 2.5; line-opacity: 1; line-color: #f0d6ad }
+        [zoom >= 8] { line-width: 2; line-color: #f0d6ad }
+        [zoom >= 9] { line-width: 2.5; line-color: #f0d6ad }
         [zoom >= 10] { line-width: 3; line-color: #cc8f33; }
         [zoom >= 12] { line-width: 4; line-color: #cc8f33; }                
-        [zoom >= 13] { line-width: 4; line-color: #cc8f33; }
         [zoom >= 14] { line-width: 5; line-color: #d0a14a; }
         [zoom >= 15] { line-width: 6; line-color: #d0a14a; }
         [zoom >= 16] { line-width: 10; line-color: #d0a14a; }
@@ -1328,21 +1327,11 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
 
     [feature = 'highway_trunk'],
     [feature = 'highway_primary'] {
-      [zoom >= 6][link != 'yes'],
+      [zoom >= 8][link != 'yes'],
       [zoom >= 10] {
-        [zoom >= 6] {
-          line-width: .5;
-          line-color: #646464;
-          line-opacity: .15;
-        }
-        [zoom >= 7] {
-          line-width: .75;
-          line-color: #e6b216;
-          line-opacity: .5;
-        }
         [zoom >= 8] {
           line-width: 1;
-          line-color: #f2c279;
+          line-color: #f0d6ad;
          }
         [zoom >= 10] {
           line-width: 1.5;
