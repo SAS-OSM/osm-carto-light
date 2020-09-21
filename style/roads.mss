@@ -283,7 +283,7 @@
 @paths-bridge-casing-width:       0.5;
 @paths-tunnel-casing-width:       1;
 
-@junction-text-color:             #2e4880;
+@junction-text-color:             #960000;
 @halo-color-for-minor-road:       white;
 @lowzoom-halo-color:              white;
 @lowzoom-halo-width:              1;
@@ -356,7 +356,7 @@
         }
         #bridges {
           line-join: round;
-          [zoom >= 13] { line-color: @bridge-casing; }
+  //      [zoom >= 13] { line-color: @bridge-casing; }
         }
       }
     }
@@ -390,7 +390,7 @@
         }
         #bridges {
           line-join: round;
-          [zoom >= 13] { line-color: @bridge-casing; }
+//        [zoom >= 13] { line-color: @bridge-casing; }
         }
       }
     }
@@ -422,7 +422,7 @@
         }
         #bridges {
           [zoom >= 13] {
-            line-color: @bridge-casing;
+//          line-color: @bridge-casing;
             line-join: round;
           }
         }
@@ -449,7 +449,7 @@
         }
         #bridges {
           [zoom >= 14] {
-            line-color: @bridge-casing;
+//          line-color: @bridge-casing;
             line-join: round;
           }
         }
@@ -1250,6 +1250,7 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
         [zoom >= 8] {
           line-color: #476bb2;
           line-width: 2; // Mapquest: 4 (?)
+          line-opacity: 1;
          }
         [zoom >= 10] {
           line-color: #6c91d9;
