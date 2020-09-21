@@ -1240,17 +1240,17 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
         [zoom >= 6] {
           line-color: #0040ff;
           line-width: 1.5;
-          line-opacity: .2;
+          line-opacity: .1;
          }
         [zoom >= 7] {
           line-color: #406dcc;
           line-width: 1.5;
-          line-opacity: .5;          
+          line-opacity: .1;          
          }
         [zoom >= 8] {
           line-color: #476bb2;
           line-width: 2; // Mapquest: 4 (?)
-          line-opacity: 1;
+          line-opacity: .2;
          }
         [zoom >= 10] {
           line-color: #6c91d9;
