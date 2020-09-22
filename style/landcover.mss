@@ -315,6 +315,9 @@
     }
   }
 */
+  // This color is slightly different from @land-color (#faf8ed).
+  [feature = 'natural_coastline'] { polygon-fill: #f6f3e9; }
+  
   [feature = 'landuse_forest'],
   [feature = 'natural_wood'] {
     [zoom >= 10] {
