@@ -1045,6 +1045,7 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
      * https://github.com/mapbox/carto/issues/235
      * https://github.com/mapbox/carto/issues/237
      */
+/*     
     [feature = 'highway_construction'][zoom >= 12] {
       [construction = 'motorway'][zoom >= 12],
       [construction = 'motorway_link'][zoom >= 13],
@@ -1231,7 +1232,7 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
         b/line-dasharray: 2,6;
       }
     }
-
+*/
     [feature = 'highway_motorway'] {
       [zoom >= 6][link != 'yes'],
       [zoom >= 10] {
