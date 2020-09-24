@@ -8,8 +8,8 @@ bounds: &world
   - 180
   - 85.05112877980659
 center:
-  - -78.6382
-  - 35.7796
+  - 0
+  - 0
   - 8
 format: png
 interactivity: false
@@ -40,7 +40,7 @@ Stylesheet:
   - style/water-features.mss
   - style/road-colors-generated.mss
   - style/roads.mss
-  - style/power.mss
+# - style/power.mss
   - style/placenames.mss
   - style/buildings.mss
   - style/stations.mss
