@@ -5,16 +5,16 @@
 /* scripts/generate_road_colours.py > style/road-colors-generated.mss */
 /*                                                                    */
 @motorway-casing: #495f8c;
-@trunk-casing: #d0a14a;
-@primary-casing: #d0a14a;
-@secondary-casing: #d99836;
-@motorway-fill: #b6caf2;
-@trunk-fill: #f5d290;
-@primary-fill: #f5d290;
-@secondary-fill: #f6f0a3;
-@motorway-low-zoom: #476bb2;
-@trunk-low-zoom: #646464;
-@primary-low-zoom: #646464;
+@trunk-casing: #b6872f;
+@primary-casing: #b6872f;
+@secondary-casing: #bfb38f;
+@motorway-fill: #d3dbeb;
+@trunk-fill: #f2c673;
+@primary-fill: #f2c673;
+@secondary-fill: #f4ed8b;
+@motorway-low-zoom: #b6caf2;
+@trunk-low-zoom: #f0d6ad;
+@primary-low-zoom: #f0d6ad;
 @secondary-low-zoom: #bfbfbf;
 @motorway-low-zoom-casing: #2e4880;
 @trunk-low-zoom-casing: #d99836;
