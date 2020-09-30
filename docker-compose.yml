@@ -17,7 +17,7 @@ services:
     env_file:
       - ${PROJECTENV}
   db:
-    image: db:v1
+    image: db:v12-3.0
     build:
       context: .
       dockerfile: Dockerfile.db
@@ -35,7 +35,7 @@ services:
       timeout: 5s
       retries: 5      
   import:
-    image: import:v1
+    image: import:v12-3.0
     build:
       context: .
       dockerfile: Dockerfile.import

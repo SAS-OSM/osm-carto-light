@@ -1,10 +1,10 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     ca-certificates curl gnupg && rm -rf /var/lib/apt/lists/*
 
-RUN echo 'deb http://ppa.launchpad.net/osmadmins/ppa/ubuntu bionic main\n\
-deb-src http://ppa.launchpad.net/osmadmins/ppa/ubuntu bionic main' > \
+RUN echo 'deb http://ppa.launchpad.net/osmadmins/ppa/ubuntu focal main\n\
+deb-src http://ppa.launchpad.net/osmadmins/ppa/ubuntu focal main' > \
     /etc/apt/sources.list.d/osmadmins-ppa.list
 
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 \
@@ -13,7 +13,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 \
 RUN apt-get update && apt-get install --no-install-recommends -y \
     osm2pgsql gdal-bin python3-psycopg2 python3-yaml \
     python3-requests postgresql-client && rm -rf /var/lib/apt/lists/*
-
+               
 ADD openstreetmap-carto.style /
 
 RUN mkdir -p /openstreetmap-carto
