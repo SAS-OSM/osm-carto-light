@@ -26,7 +26,7 @@
 
 @default-casing: white;
 @tertiary-casing: #bfb38f;
-@residential-casing: #bbb;
+@residential-casing: #bababa;
 @road-casing: @residential-casing;
 @service-casing: @residential-casing;
 @living-street-casing: @residential-casing;
@@ -2076,7 +2076,7 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
       }
     }
 
-    [feature = 'railway_rail'][zoom >= 8],
+    [feature = 'railway_rail'][zoom >= 11],
     [feature = 'railway_INT-spur-siding-yard'][zoom >= 13] {
       [zoom < 13] {
         line-color: #787878;
