@@ -507,6 +507,9 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
       }
     }
     [zoom >= 10] {
+      polygon-opacity: .15;    
+      polygon-fill: #28b844;
+/*      
       // inner line
       ::wideline {
         opacity: 0.15;
@@ -547,6 +550,8 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
             line-width: 2;
         }
       }
+*/
+      [zoom >= 12] { polygon-fill: #1ea938; }
     }
   }
 }
