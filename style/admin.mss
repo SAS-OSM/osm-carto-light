@@ -495,9 +495,9 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
 
 #protected-areas {
   [way_pixels > 750] {
-    [zoom >= 10] {
+    [zoom >= 9] {
       polygon-opacity: .15;    
-      polygon-fill: #28b844;
+      polygon-fill: #c7ffad;
 /*      
       // inner line
       ::wideline {
@@ -540,7 +540,6 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
         }
       }
 */
-      [zoom >= 12] { polygon-fill: #1ea938; }
     }
   }
 }
