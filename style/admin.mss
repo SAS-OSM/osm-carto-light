@@ -495,17 +495,6 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
 
 #protected-areas {
   [way_pixels > 750] {
-    [zoom >= 8][zoom < 10] {
-      opacity: 0.25;
-      line-width: 1.2;
-      line-color: @protected-area;
-      [boundary = 'aboriginal_lands'] {
-        line-color: @aboriginal;
-      }
-      [zoom >= 9] {
-        line-width: 1.5;
-      }
-    }
     [zoom >= 10] {
       polygon-opacity: .15;    
       polygon-fill: #28b844;
