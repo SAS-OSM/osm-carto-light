@@ -53,7 +53,7 @@
 }
 
 #state-names {
-  [zoom >= 5][zoom < 7][way_pixels > 3000],
+  [zoom >= 4][zoom < 7][way_pixels > 3000],
   [zoom >= 7][way_pixels > 3000][way_pixels < 196000] {
     text-name: "[name]";
     text-size: 10;
