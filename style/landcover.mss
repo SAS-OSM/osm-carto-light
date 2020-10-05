@@ -317,10 +317,11 @@
 */
   // This color is slightly different from @land-color (#faf8ed).
   [feature = 'natural_coastline'] { polygon-fill: #f6f3e9; }
-  
+
+  [feature = 'landuse_military'],
   [feature = 'landuse_forest'],
   [feature = 'natural_wood'] {
-    [zoom >= 10] {
+    [zoom >= 8] {
       polygon-fill: @forest;
       polygon-opacity: .25;
       [way_pixels >= 4]  { polygon-gamma: 0.75; }
