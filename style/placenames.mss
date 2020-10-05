@@ -241,7 +241,7 @@
 
 #placenames-medium::medium-importance {
   [category = 1][score < 400000][zoom < 15] {
-    [zoom >= 6][zoom < 8][score >= 70000],
+    [zoom >= 5][zoom < 8][score >= 70000],
     [zoom >= 7][zoom < 8] {
       shield-file: url('symbols/place/place-4.svg');
       shield-text-dx: 4;
