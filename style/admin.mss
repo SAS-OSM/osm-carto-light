@@ -13,6 +13,7 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
 #admin-low-zoom[zoom < 8],
 #admin-mid-zoom[zoom >= 8][zoom < 13],
 #admin-high-zoom[zoom >= 13] {
+/*
   [admin_level = '2']::firstline {
     [zoom >= 8] {
       background/line-join: bevel;
@@ -26,6 +27,7 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
     [zoom >= 13] { background/line-width: 7; }
     [zoom >= 14] { background/line-width: 8; }
   }
+
   [admin_level = '2']::wideline {
     [zoom >= 4] {
       background/line-join: bevel;
@@ -114,7 +116,7 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
       thin/line-dasharray: 36,2,8,2;
     }
   }
-
+*/
   [admin_level = '3']::firstline {
     [zoom >= 8] {
       background/line-join: bevel;
@@ -447,7 +449,7 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
 
 #admin-text[zoom >= 11][way_pixels >= 196000] {
   [admin_level = '1'][way_pixels >= 360000],
-  [admin_level = '2'][way_pixels >= 360000],
+//[admin_level = '2'][way_pixels >= 360000],
   [zoom >= 11][admin_level = '3'],
   [zoom >= 11][admin_level = '4'],
   [zoom >= 11][admin_level = '5'],
