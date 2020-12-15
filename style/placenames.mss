@@ -6,7 +6,7 @@
 
 #country-names {
   [zoom >= 3][zoom < 5][way_pixels > 1000],
-  [zoom >= 5][zoom < 8][way_pixels > 10000] {
+  [zoom >= 5][way_pixels < 360000] {
     text-name: "[name]";
     text-size: 10;
     text-wrap-width: 18; // 3.5 em
@@ -32,6 +32,16 @@
       text-margin: 9.1; // 0.7 em
       text-transform: uppercase;
     }
+    [zoom >= 9] {
+      text-size: 14;
+      text-wrap-width: 28; // 3.9 em
+      text-line-spacing: -0.7; // -0.05 em
+    }
+    [zoom >= 10] {
+      text-size: 15;
+      text-wrap-width: 30; // 4.0 em
+      text-line-spacing: -0.4; // -0.02 em
+    }
     text-fill: @country-labels;
     text-face-name: @bold-fonts;
     text-halo-fill: @standard-halo-fill;
@@ -41,8 +51,8 @@
 }
 
 #state-names {
-  [zoom >= 4][zoom < 7][way_pixels > 2000],
-  [zoom >= 7][way_pixels > 2000][way_pixels < 196000] {
+  [zoom >= 5][zoom < 7][way_pixels > 3000],
+  [zoom >= 7][way_pixels > 3000][way_pixels < 196000] {
     text-name: "[name]";
     text-size: 10;
     text-wrap-width: 18; // 3.5 em
@@ -121,7 +131,7 @@
   }
   [zoom >= 8] {
     text-name: '[name]';
-    text-face-name: @bold-fonts;    
+    text-face-name: @bold-fonts;
     text-fill: @placenames;
     text-size: 13;
     text-wrap-width: 33; // 5.0 em
@@ -142,20 +152,13 @@
       text-line-spacing: -0.75; // -0.05 em
       text-margin: 10.5; // 0.7 em
     }
-    [zoom >= 14] {
-      text-size: 15;
-      text-wrap-width: 38; // 5.0 em
-      text-line-spacing: -0.75; // -0.05 em
-      text-margin: 10.5; // 0.7 em
-      text-transform: uppercase;
-    }    
   }
 }
 
 #placenames-medium::high-importance {
   [category = 1][zoom < 14] {
     [zoom >= 4][zoom < 5][score >= 3000000],
-    [zoom >= 6][zoom < 8][score >= 400000] {
+    [zoom >= 5][zoom < 8][score >= 400000] {
       shield-file: url('symbols/place/place-4.svg');
       shield-text-dx: 4;
       shield-text-dy: 4;
@@ -195,7 +198,7 @@
     }
     [zoom >= 8][score >= 400000] {
       text-name: '[name]';
-      text-face-name: @bold-fonts;      
+      text-face-name: @bold-fonts;
       text-fill: @placenames;
       text-size: 13;
       text-wrap-width: 33; // 5.0 em
@@ -216,20 +219,13 @@
         text-line-spacing: -0.75; // -0.05 em
         text-margin: 10.5; // 0.7 em
       }
-      [zoom >= 14] {
-        text-size: 15;
-        text-wrap-width: 38; // 5.0 em
-        text-line-spacing: -0.75; // -0.05 em
-        text-margin: 10.5; // 0.7 em
-        text-transform: uppercase;
-      }      
     }
   }
 }
 
 #placenames-medium::medium-importance {
   [category = 1][score < 400000][zoom < 15] {
-    [zoom >= 5][zoom < 8][score >= 70000],
+    [zoom >= 6][zoom < 8][score >= 70000],
     [zoom >= 7][zoom < 8] {
       shield-file: url('symbols/place/place-4.svg');
       shield-text-dx: 4;
@@ -257,7 +253,7 @@
       text-name: "[name]";
       text-size: 10;
       text-fill: @placenames;
-      text-face-name: @bold-fonts;                    
+      text-face-name: @bold-fonts;
       text-halo-fill: @standard-halo-fill;
       text-halo-radius: @standard-halo-radius * 1.5;
       text-wrap-width: 20; // 4.0 em
@@ -298,7 +294,7 @@
       text-name: "[name]";
       text-size: 10;
       text-fill: @placenames;
-      text-face-name: @bold-fonts;      
+      text-face-name: @bold-fonts;
       text-halo-fill: @standard-halo-fill;
       text-halo-radius: @standard-halo-radius * 1.5;
       text-wrap-width: 23; // 4.5 em
@@ -331,7 +327,7 @@
     text-name: "[name]";
     text-size: 11;
     text-fill: @placenames;
-    text-face-name: @bold-fonts;    
+    text-face-name: @bold-fonts;
     text-halo-fill: @standard-halo-fill;
     text-halo-radius: @standard-halo-radius * 1.5;
     text-wrap-width: 28; // 5.0 em
@@ -368,7 +364,7 @@
       text-name: "[name]";
       text-size: 10;
       text-fill: @placenames;
-      text-face-name: @bold-fonts;      
+      text-face-name: @bold-fonts;
       text-halo-fill: @standard-halo-fill;
       text-halo-radius: @standard-halo-radius * 1.5;
       text-wrap-width: 25; // 5.0 em
@@ -438,7 +434,7 @@
     [zoom >= 14][zoom < 18] {
       text-name: "[name]";
       text-fill: @placenames;
-      text-face-name: @bold-fonts;                            
+      text-face-name: @bold-fonts;
       text-halo-fill: white;
       text-halo-radius: @standard-halo-radius * 1.5;
       [zoom >= 14] {
@@ -474,7 +470,7 @@
     text-name: "[name]";
     text-size: 10;
     text-fill: @placenames;
-    text-face-name: @bold-fonts;    
+    text-face-name: @bold-fonts;
     text-halo-fill: @standard-halo-fill;
     text-halo-radius: @standard-halo-radius * 1.5;
     text-wrap-width: 23; // 4.5 em
@@ -501,7 +497,7 @@
       text-line-spacing: -1.5; // -0.15 em
       text-margin: 7.0; // 0.7 em
       text-fill: @county-labels;
-      text-face-name: @book-fonts;      
+      text-face-name: @book-fonts;
       text-halo-fill: @standard-halo-fill;
       text-halo-radius: @standard-halo-radius * 1.5;
       text-placement-type: simple;
