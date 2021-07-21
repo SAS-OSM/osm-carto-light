@@ -6,7 +6,7 @@
 @transportation-text: #0066ff;
 @accommodation-icon: @transportation-icon;
 @accommodation-text: @transportation-text;
-@airtransport: #b4b4b4; //also ferry_terminal
+@airtransport: #000000; //also ferry_terminal
 @health-color: #BF0000;
 @amenity-brown: #734a08;
 @gastronomy-icon: #C77400;
