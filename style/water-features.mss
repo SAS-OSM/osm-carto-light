@@ -4,6 +4,7 @@
 @weir-line: #aaa;
 @lock-gate: #aaa;
 @lock-gate-line: #aaa;
+@pier-color: #ffffff;
 
 #water-barriers-point, #water-barriers-line, #water-barriers-poly {
   [waterway = 'dam'] {
@@ -67,11 +68,11 @@
 #piers-poly, #piers-line {
   [man_made = 'pier'][zoom >= 12] {
     #piers-poly {
-      polygon-fill: @land-color;
+      polygon-fill: @pier-color;
     }
     #piers-line {
       line-width: 0.5;
-      line-color: @land-color;
+      line-color: @pier-color;
       line-cap: square;
       [zoom >= 13] { line-width: 1; }
       [zoom >= 15] { line-width: 2; }
