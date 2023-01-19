@@ -67,13 +67,13 @@
 #piers-poly, #piers-line {
   [man_made = 'pier'][zoom >= 12] {
     #piers-poly {
-      polygon-fill: @residential-fill;
-      line-color: @residential-casing;
+      polygon-fill: #ffffff;
+      line-color: #d6d6d6;
       line-width: @residential-casing-width-z13;
     }
     #piers-line {
       line-width: 0.5;
-      line-color: @residential-fill;
+      line-color: #d6d6d6;
       line-cap: square;
       [zoom >= 13] { line-width: 1; }
       [zoom >= 15] { line-width: 2; }
