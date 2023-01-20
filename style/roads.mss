@@ -7,12 +7,12 @@
 @pedestrian-fill: #dddde8;
 @raceway-fill: pink;
 @road-fill: #ddd;
-@footway-fill: salmon;
-@footway-fill-noaccess: #bbbbbb;
+@footway-fill: #8f8f8f;
+@footway-fill-noaccess: @footway-fill;
 @steps-fill: @footway-fill;
-@steps-fill-noaccess: #bbbbbb;
-@cycleway-fill: blue;
-@cycleway-fill-noaccess: #9999ff;
+@steps-fill-noaccess: @steps-fill;
+@cycleway-fill: @footway-fill;
+@cycleway-fill-noaccess: @cycleway-fill;
 @bridleway-fill: green;
 @bridleway-fill-noaccess: #aaddaa;
 @track-fill: #996600;
