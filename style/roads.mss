@@ -1,6 +1,6 @@
 /* For the main linear features, such as roads and railways. */
 
-@tertiary-fill: #ffffff;
+@tertiary-fill: #e9e9e9;
 @residential-fill: #ffffff;
 @service-fill: #ffffff;
 @living-street-fill: #ededed;
