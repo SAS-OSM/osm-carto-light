@@ -497,7 +497,7 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
   [way_pixels > 750] {
     [zoom >= 9] {
       polygon-opacity: .15;    
-      polygon-fill: #c7ffad;
+      polygon-fill: desaturate(#c7ffad, 100%);
 /*      
       // inner line
       ::wideline {
