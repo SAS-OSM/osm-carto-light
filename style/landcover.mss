@@ -44,7 +44,7 @@
 @cemetery: desaturate(#619e3a, 100%); // also grave_yard
 @construction: desaturate(#c7c7b4, 100%); // also brownfield
 @heath: desaturate(#d6d99f, 100%);
-@mud: rgba(203,177,154,0.3); // produces #e6dcd1 over @land
+@mud: desaturate(rgba(203,177,154,0.3), 100%); // produces #e6dcd1 over @land
 @place_of_worship: desaturate(#d0d0d0, 100%); // also landuse_religious
 @place_of_worship_outline: darken(@place_of_worship, 30%);
 @leisure: lighten(@park, 5%);

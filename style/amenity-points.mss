@@ -1,28 +1,28 @@
-@marina-text: #576ddf; // also swimming_pool
-@wetland-text: darken(#4aa5fa, 25%); /* Also for mud */
-@shop-icon: #ac39ac;
-@shop-text: #939;
-@transportation-icon: #0092da;
-@transportation-text: #0066ff;
+@marina-text: #757575; // also swimming_pool
+@wetland-text: #757575; /* Also for mud */
+@shop-icon: #757575;
+@shop-text: #757575;
+@transportation-icon: #757575;
+@transportation-text: #757575;
 @accommodation-icon: @transportation-icon;
 @accommodation-text: @transportation-text;
-@airtransport: #000000; //also ferry_terminal
-@health-color: #BF0000;
-@amenity-brown: #734a08;
-@gastronomy-icon: #C77400;
-@gastronomy-text: darken(@gastronomy-icon, 5%);
+@airtransport: #757575; //also ferry_terminal
+@health-color: #757575;
+@amenity-brown: #757575;
+@gastronomy-icon: #757575;
+@gastronomy-text: @gastronomy-icon;
 @memorials: @amenity-brown;
 @culture: @amenity-brown;
 @public-service: @amenity-brown;
-@office: #4863A0;
-@man-made-icon: #666666;
+@office: #757575;
+@man-made-icon: #757575;
 @advertising-grey: @man-made-icon;
-@barrier-icon: #3f3f3f;
-@landform-color: #d08f55;
-@leisure-green: darken(@park, 60%);
-@protected-area: #008000;
-@aboriginal: #82643a;
-@religious-icon: #000000;
+@barrier-icon: #757575;
+@landform-color: #757575;
+@leisure-green: #5b5b5b;
+@protected-area: #5b5b5b;
+@aboriginal: #757575;
+@religious-icon: #757575;
 
 @landcover-font-size: 10;
 @landcover-wrap-width-size: 30; // 3 em
@@ -193,7 +193,7 @@
 
   [feature = 'highway_traffic_signals'][zoom >= 17] {
     marker-file: url('symbols/highway/traffic_light.13.svg');
-    marker-fill: #545454;
+    marker-fill: #757575;
     marker-clip: false;
   }
 
@@ -1809,7 +1809,7 @@
     text-size: @standard-font-size;
     text-wrap-width: @standard-wrap-width;
     text-line-spacing: @standard-line-spacing-size;
-    text-fill: #000033;
+    text-fill: #757575;
     text-dy: 12;
     text-face-name: @standard-font;
     text-halo-radius: @standard-halo-radius;
@@ -2743,7 +2743,7 @@
     text-size: @standard-font-size;
     text-wrap-width: @standard-wrap-width;
     text-line-spacing: @standard-line-spacing-size;
-    text-fill: black;
+    text-fill: #757575;
     text-face-name: @standard-font;
     text-halo-radius: @standard-halo-radius;
     text-halo-fill: @standard-halo-fill;
@@ -2826,7 +2826,7 @@
         text-wrap-width: @landcover-wrap-width-size-bigger;
         text-line-spacing: @landcover-line-spacing-size-bigger;
       }
-      text-fill: darken(@apron, 60%);
+      text-fill: #757575;
       text-face-name: @landcover-face-name;
       text-halo-radius: @standard-halo-radius;
       text-halo-fill: @standard-halo-fill;
@@ -2905,7 +2905,7 @@
       text-size: @standard-font-size;
       text-wrap-width: @standard-wrap-width;
       text-line-spacing: @standard-line-spacing-size;
-      text-fill: darken(@airtransport, 15%);
+      text-fill: @airtransport;
       text-dy: 10;
       text-face-name: @oblique-fonts;
       text-halo-radius: @standard-halo-radius;
@@ -2918,7 +2918,7 @@
     text-size: @standard-font-size;
     text-wrap-width: @standard-wrap-width;
     text-line-spacing: @standard-line-spacing-size;
-    text-fill: darken(@airtransport, 15%);
+    text-fill: @airtransport;
     text-dy: 10;
     text-face-name: @oblique-fonts;
     text-halo-radius: @standard-halo-radius;

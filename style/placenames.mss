@@ -1,8 +1,8 @@
-@placenames: #2b2b2b;
-@placenames-light: #777777;
-@country-labels: #918378;
-@state-labels: #805433;
-@county-labels: #5a5a5a;
+@placenames: #5b5b5b;
+@placenames-light: #5b5b5b;
+@country-labels: #757575;
+@state-labels: #5b5b5b;
+@county-labels: #757575;
 
 #country-names {
   [zoom >= 3][zoom < 5][way_pixels > 1000],

@@ -106,7 +106,7 @@
         center/line-join: round;
         [substance = 'water'] { center/line-color: @water-color; }
         [substance = 'gas'] { center/line-color: #c1c1c1; } // Lch(78,0,0)
-        [substance = 'oil'] { center/line-color: #cfbfa5; } // Lch(78,15,83)
+        [substance = 'oil'] { center/line-color: #c1c1c1; } // Lch(78,15,83)
       }
       [zoom >= 18] {
         line/line-width: 3;
@@ -143,7 +143,7 @@
   [feature = 'man_made_pipeline'] {
     [zoom >= 17] {
       text-name: "[name]";
-      text-fill: #666666;
+      text-fill: #757575;
       text-size: 10;
       text-dy: 4;
       text-spacing: 900;

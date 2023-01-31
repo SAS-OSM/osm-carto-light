@@ -1,4 +1,4 @@
-@building-fill: #d9d0c9;  // Lch(84, 5, 68)
+@building-fill: #eeeeee;  // Lch(84, 5, 68)
 @building-line: darken(@building-fill, 15%);  // Lch(70, 9, 66)
 @building-low-zoom: darken(@building-fill, 4%);
 
@@ -12,12 +12,13 @@
 
 #buildings {
   [zoom >= 13] {
-    polygon-fill: #999999;
+    polygon-fill: #eeeeee;
     polygon-opacity: .25;
     polygon-clip: false;
     [zoom >= 17] {
       line-color: #808080;
-      line-width: .7;
+      // line-width: .7;
+      line-width: 0;
       line-opacity: .25;
       line-clip: false;
     }
