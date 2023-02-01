@@ -1,4 +1,4 @@
-@station-color: desaturate(#7981b0, 100%);
+@station-color: #757575;
 @station-text: #757575;
 
 #stations {

@@ -1373,7 +1373,7 @@
 
   [feature = 'natural_volcano'][zoom >= 13] {
     marker-file: url('symbols/natural/peak.svg');
-    marker-fill: #d40000;
+    marker-fill: #757575;
     marker-clip: false;
   }
 
@@ -1908,7 +1908,7 @@
     text-size: @standard-font-size;
     text-wrap-width: @standard-wrap-width;
     text-line-spacing: @standard-line-spacing-size;
-    text-fill: darken(@man-made-icon, 20%);
+    text-fill: @man-made-icon;
     [feature = 'power_generator']['generator:source' = 'wind'],
     [feature = 'historic_city_gate'],
     [feature = 'man_made_mast'],
@@ -1960,7 +1960,7 @@
     text-size: @standard-font-size;
     text-wrap-width: @standard-wrap-width;
     text-line-spacing: @standard-line-spacing-size;
-    text-fill: darken(@man-made-icon, 20%);
+    text-fill: @man-made-icon;
     text-dy: 10;
     text-face-name: @standard-font;
     text-halo-radius: @standard-halo-radius;
@@ -2521,7 +2521,7 @@
     text-size: @standard-font-size;
     text-wrap-width: @standard-wrap-width;
     text-line-spacing: @standard-line-spacing-size;
-    text-fill: darken(@man-made-icon, 20%);
+    text-fill: @man-made-icon;
     text-dy: 10;
     text-face-name: @standard-font;
     text-halo-radius: @standard-halo-radius;
@@ -2931,7 +2931,7 @@
     text-wrap-width: @standard-wrap-width;
     text-line-spacing: @standard-line-spacing-size;
     text-dy: 10;
-    text-fill: darken(@man-made-icon, 20%);
+    text-fill: @man-made-icon;
     text-face-name: @standard-font;
     text-halo-radius: @standard-halo-radius;
     text-halo-fill: @standard-halo-fill;
@@ -3008,7 +3008,7 @@
     text-size: @standard-font-size;
     text-wrap-width: @standard-wrap-width;
     text-line-spacing: @standard-line-spacing-size;
-    text-fill: darken(@man-made-icon, 20%);
+    text-fill: @man-made-icon;
     text-dy: 6;
       [feature = 'historic_wayside_shrine'] { text-dy: 10; }
     text-face-name: @standard-font;
