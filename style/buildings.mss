@@ -13,13 +13,13 @@
 #buildings {
   [zoom >= 13] {
     polygon-fill: #eeeeee;
-    polygon-opacity: .25;
+  //polygon-opacity: .25;
     polygon-clip: false;
     [zoom >= 17] {
       line-color: #808080;
       // line-width: .7;
       line-width: 0;
-      line-opacity: .25;
+      // line-opacity: .25;
       line-clip: false;
     }
     [amenity = 'place_of_worship'],

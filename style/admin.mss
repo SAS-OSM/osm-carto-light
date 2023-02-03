@@ -497,7 +497,7 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
   [way_pixels > 750] {
     [zoom >= 9] {
       polygon-opacity: .15;    
-      polygon-fill: desaturate(#c7ffad, 100%);
+      polygon-fill: #fafafa;
 /*      
       // inner line
       ::wideline {
@@ -510,7 +510,7 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
         // also applies to inner rings of multipolygons.) So a negative
         // line-offset is always an offset to the inner side of the polygon.
         line-offset: -0.9;
-        line-color: @protected-area;
+        line-color: #cecece;
         [boundary = 'aboriginal_lands'] {
           line-color: @aboriginal;
         }
