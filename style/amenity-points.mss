@@ -2942,7 +2942,7 @@
     text-size: @standard-font-size;
     text-wrap-width: @standard-wrap-width;
     text-line-spacing: @standard-line-spacing-size;
-    text-fill: green;
+    text-fill: #5b5b5b;
     text-dy: 7;
     [zoom >= 18] { text-dy: 8; }
     [zoom >= 19] { text-dy: 11; }
@@ -3100,7 +3100,7 @@
   ::canopy {
     opacity: 0.3;
     [natural = 'tree_row'] {
-      line-color: green;
+      line-color: #eeeeee;
       line-cap: round;
       line-width: 2.5;
       [zoom >= 17] {
@@ -3118,7 +3118,7 @@
     }
     [natural = 'tree'] {
       [zoom >= 18] {
-        marker-fill: green;
+        marker-fill: #eeeeee;
         marker-allow-overlap: true;
         marker-line-width: 0;
         marker-ignore-placement: true;
@@ -3137,7 +3137,7 @@
   }
   [natural = 'tree']::trunk {
     [zoom >= 18] {
-      trunk/marker-fill: #b27f36;
+      trunk/marker-fill: #757575;
       trunk/marker-allow-overlap: true;
       trunk/marker-line-width: 0;
       trunk/marker-width: 2;
