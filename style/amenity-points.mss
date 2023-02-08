@@ -21,7 +21,7 @@
 @landform-color: #757575;
 @leisure-green: #5b5b5b;
 @protected-area: #5b5b5b;
-@aboriginal: #757575;
+@aboriginal: #5b5b5b;
 @religious-icon: #757575;
 
 @landcover-font-size: 10;
@@ -2310,7 +2310,7 @@
       }
       [feature = 'tourism_theme_park'],
       [feature = 'tourism_zoo'] {
-        text-fill: @tourism;
+        text-fill: #757575;
         text-face-name: @bold-fonts; /*rendered bold to improve visibility since theme parks tend to have crowded backgrounds*/
       }
       [feature = 'amenity_kindergarten'],
@@ -2969,7 +2969,7 @@
     text-size: @standard-font-size;
     text-wrap-width: @standard-wrap-width;
     text-line-spacing: @standard-line-spacing-size;
-    text-fill: @tourism;
+    text-fill: #757575;
     text-halo-radius: @standard-halo-radius;
     text-halo-fill: @standard-halo-fill;
     text-face-name: @standard-font;
