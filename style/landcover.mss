@@ -79,8 +79,7 @@
   [feature = 'leisure_swimming_pool'][zoom >= 14] {
     polygon-fill: #ffffff;
     [zoom >= 17] {
-    //line-width: 0.5;
-      line-width: 0;
+      line-width: 0.5;
       line-color: #e0e0e0;
     }
     [way_pixels >= 4]  { polygon-gamma: 0.75; }

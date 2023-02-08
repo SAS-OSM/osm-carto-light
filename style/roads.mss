@@ -4,8 +4,8 @@
 @residential-fill: #ffffff;
 @service-fill: #ffffff;
 @living-street-fill: #ededed;
-@pedestrian-fill: #dddde8;
-@raceway-fill: pink;
+@pedestrian-fill: #ffffff;
+@raceway-fill: #e9e9e9;
 @road-fill: #ddd;
 @footway-fill: #8f8f8f;
 @footway-fill-noaccess: @footway-fill;
@@ -17,7 +17,7 @@
 @bridleway-fill-noaccess: #ffffff;
 @track-fill: #b4b4b4;
 @track-fill-noaccess: #b4b4b4;
-@aeroway-fill: #b4b4b4;
+@aeroway-fill: @apron;
 @runway-fill: @aeroway-fill;
 @taxiway-fill: @aeroway-fill;
 @helipad-fill: @aeroway-fill;
