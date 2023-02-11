@@ -44,7 +44,7 @@
 @cemetery: @grass; // also grave_yard
 @construction: #eeeeee; // also brownfield
 @heath: desaturate(#d6d99f, 100%);
-@mud: desaturate(rgba(203,177,154,0.3), 100%); // produces #e6dcd1 over @land
+@mud: #ffffff;
 @place_of_worship: #ffffff; // also landuse_religious
 @place_of_worship_outline: #e0e0e0;
 @leisure: @grass;
@@ -275,7 +275,7 @@
   [feature = 'leisure_dog_park'] {
     [zoom >= 10] {
       polygon-fill: @grass;
-      polygon-opacity: .15;
+      polygon-opacity: .5;
       line-color: #e0e0e0;
       line-width: 1;
       [way_pixels >= 4]  { polygon-gamma: 0.75; }
@@ -292,15 +292,18 @@
 
   [feature = 'leisure_golf_course'][zoom >= 12] {
     polygon-fill: @golf_course;
-    polygon-opacity: .2;
-    [zoom >= 15] { polygon-opacity: .25 }
+    polygon-opacity: .5;
+    line-color: #e0e0e0;
+    line-width: 1;
     [way_pixels >= 4]  { polygon-gamma: 0.75; }
     [way_pixels >= 64] { polygon-gamma: 0.3;  }
   }
 
   [feature = 'leisure_miniature_golf'][zoom >= 15] {
     polygon-fill: @golf_course;
-    polygon-opacity: .2;
+    polygon-opacity: .5;
+    line-color: #e0e0e0;
+    line-width: 1;    
     [way_pixels >= 4]  { polygon-gamma: 0.75; }
     [way_pixels >= 64] { polygon-gamma: 0.3;  }
   }
@@ -789,6 +792,7 @@
     [int_wetland = 'tidalflat'] {
       [zoom >= 9] {
         polygon-fill: @mud;
+        polygon-opacity: .5;
         [way_pixels >= 4]  { polygon-gamma: 0.75; }
         [way_pixels >= 64] { polygon-gamma: 0.3;  }
       }

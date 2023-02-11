@@ -498,7 +498,7 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
     [zoom >= 9] {
   //  opacity: .25;
       line-color: #cecece;
-      line-width: 1;
+      line-width: .75;
       [boundary = 'aboriginal_lands'] {
         line-color: @aboriginal;
       }
