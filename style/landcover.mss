@@ -63,7 +63,7 @@
 
 // --- Sports ---
 
-@pitch: desaturate(#aae0cb, 100%);           // Lch(85,22,168) also track
+@pitch: @grass;
 @track: @pitch;
 @stadium: @leisure; // also sports_centre
 @golf_course: @grass;

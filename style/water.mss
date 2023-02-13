@@ -22,8 +22,8 @@
   [natural = 'water'],
   [landuse = 'reservoir'],
   [waterway = 'riverbank'] {
+    polygon-fill: @water-color;
     [int_intermittent = 'no'] {
-      polygon-fill: @water-color;
       [way_pixels >= 4] { polygon-gamma: 0.75; }
       [way_pixels >= 64] { polygon-gamma: 0.6; }
     }
