@@ -792,7 +792,6 @@
     [int_wetland = 'tidalflat'] {
       [zoom >= 9] {
         polygon-fill: @mud;
-        polygon-opacity: .5;
         [way_pixels >= 4]  { polygon-gamma: 0.75; }
         [way_pixels >= 64] { polygon-gamma: 0.3;  }
       }
