@@ -22,13 +22,14 @@
   [natural = 'water'],
   [landuse = 'reservoir'],
   [waterway = 'riverbank'] {
-    polygon-fill: @water-color;
     [int_intermittent = 'no'] {
+      polygon-fill: @water-color;
       [way_pixels >= 4] { polygon-gamma: 0.75; }
       [way_pixels >= 64] { polygon-gamma: 0.6; }
     }
     [int_intermittent = 'yes'] {
       polygon-pattern-file: url('symbols/intermittent_water.png');
+      polygon-pattern-opacity: .5;
       [way_pixels >= 4] { polygon-pattern-gamma: 0.75; }
       [way_pixels >= 64] { polygon-pattern-gamma: 0.6; }
     }
