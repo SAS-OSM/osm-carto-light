@@ -856,6 +856,7 @@
     }
     [natural = 'scrub'] {
       polygon-pattern-file: url('symbols/scrub.png');
+      polygon-pattern-opacity: .5;
       polygon-pattern-alignment: global;
     }
   }
