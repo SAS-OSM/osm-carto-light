@@ -338,7 +338,7 @@
   [feature = 'natural_wood'] {
     [zoom >= 8] {
       polygon-fill: @forest;
-      polygon-opacity: .25;
+    //polygon-opacity: .25;
       [way_pixels >= 4]  { polygon-gamma: 0.75; }
       [way_pixels >= 64] { polygon-gamma: 0.3;  }
     }
