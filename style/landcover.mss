@@ -21,10 +21,10 @@
 @commercial-line: desaturate(#d1b2b0, 100%);  // Lch(75,12,25)
 @industrial: desaturate(#ebdbe8, 100%);       // Lch(89,9,330) (Also used for railway, wastewater_plant)
 @industrial-line: desaturate(#c6b3c3, 100%);  // Lch(75,11,330) (Also used for railway-line, wastewater_plant-line)
-@farmland: desaturate(#eef0d5, 100%);         // Lch(94,14,112)
-@farmland-line: desaturate(#c7c9ae, 100%);    // Lch(80,14,112)
-@farmyard: desaturate(#f5dcba, 100%);         // Lch(89,20,80)
-@farmyard-line: desaturate(#d1b48c, 100%);    // Lch(75,25,80)
+@farmland: @grass;
+@farmland-line: #e0e0e0;
+@farmyard: @farmland; 
+@farmyard-line: @farmland-line;
 
 // --- Transport ----
 
