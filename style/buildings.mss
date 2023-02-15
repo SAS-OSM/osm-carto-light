@@ -27,7 +27,9 @@
     [aerialway = 'station'],
     [building = 'train_station'],
     [public_transport = 'station'] {
-      polygon-fill: @building-major-z14;
+      polygon-fill: @building-fill;
+      line-width: 0;
+    /*
       [zoom >= 15] {
         polygon-fill: @building-major-z15;
         line-color: @building-major-line;
@@ -35,6 +37,7 @@
           polygon-fill: @building-major-fill;
         }
       }
+    */
     }
   }
 }
