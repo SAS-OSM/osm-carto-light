@@ -127,6 +127,8 @@
   [feature = 'landuse_vineyard'] {
     [zoom >= 5] {
       polygon-fill: @orchard;
+      line-color: #e0e0e0;
+      line-width: 1;
       [way_pixels >= 4]  { polygon-gamma: 0.75; }
       [way_pixels >= 64] { polygon-gamma: 0.3;  }
     }
@@ -142,6 +144,8 @@
   [feature = 'landuse_orchard'] {
     [zoom >= 5] {
       polygon-fill: @orchard;
+      line-color: #e0e0e0;
+      line-width: 1;
       [way_pixels >= 4]  { polygon-gamma: 0.75; }
       [way_pixels >= 64] { polygon-gamma: 0.3;  }
     }
@@ -255,7 +259,8 @@
   [feature = 'leisure_park'] {
     [zoom >= 10] {
       polygon-fill: @park;
-      polygon-opacity: .15;
+      line-color: #e0e0e0;
+      line-width: 1;
       [way_pixels >= 4]  { polygon-gamma: 0.75; }
       [way_pixels >= 64] { polygon-gamma: 0.3;  }
     }
@@ -858,6 +863,8 @@
       polygon-pattern-file: url('symbols/scrub.png');
       polygon-pattern-opacity: .5;
       polygon-pattern-alignment: global;
+      line-color: #e0e0e0;
+      line-width: 1;
     }
   }
 
