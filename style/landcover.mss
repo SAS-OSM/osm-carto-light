@@ -558,6 +558,8 @@
 
   [feature = 'natural_heath'][zoom >= 10] {
     polygon-fill: @heath;
+    line-color: #e0e0e0;
+    line-width: 1;
     [way_pixels >= 4]  { polygon-gamma: 0.75; }
     [way_pixels >= 64] { polygon-gamma: 0.3;  }
   }
