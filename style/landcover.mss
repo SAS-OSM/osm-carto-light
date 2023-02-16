@@ -48,8 +48,8 @@
 @place_of_worship: #ffffff; // also landuse_religious
 @place_of_worship_outline: #e0e0e0;
 @leisure: @grass;
-@power: darken(@industrial, 5%);
-@power-line: darken(@industrial-line, 5%);
+@power: #e6e6e6;
+@power-line: #c1c1c1;
 @sand: desaturate(#f5e9c6, 100%);
 @societal_amenities: #ffffff;   // Lch(99,13,109)
 @tourism: @campsite;
@@ -478,7 +478,7 @@
       line-width: 0.5;
       line-color: @power-line;
       [name != ''] {
-        line-width: 0.7;
+      line-width: 0.7;
       }
     }
     [way_pixels >= 4]  { polygon-gamma: 0.75; }
