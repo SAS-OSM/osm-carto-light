@@ -43,7 +43,7 @@
 @campsite: #eeeeee; // also caravan_site, picnic_site
 @cemetery: @grass; // also grave_yard
 @construction: #eeeeee; // also brownfield
-@heath: desaturate(#d6d99f, 100%);
+@heath: @grass;
 @mud: #ffffff;
 @place_of_worship: #ffffff; // also landuse_religious
 @place_of_worship_outline: #e0e0e0;
@@ -161,7 +161,7 @@
   [feature = 'leisure_garden'] {
     [zoom >= 10] {
       polygon-fill: @grass;
-      polygon-opacity: .15;
+    //polygon-opacity: .15;
       line-color: #e0e0e0;
       line-width: 1;
       [way_pixels >= 4]  { polygon-gamma: 0.75; }
@@ -196,7 +196,7 @@
       line-color:  #e0e0e0;
       line-width: 1;
       polygon-fill: @cemetery;
-      polygon-opacity: .25;
+    //polygon-opacity: .5;
       [way_pixels >= 4]  { polygon-gamma: 0.75; }
       [way_pixels >= 64] { polygon-gamma: 0.3;  }
     }
@@ -232,7 +232,7 @@
     polygon-pattern-alignment: global;
     line-color: #e0e0e0;
     line-width: 3;
-    line-opacity: 0.329;
+  //line-opacity: 0.329;
   }
 /*
   [feature = 'landuse_residential'][zoom >= 10] {
@@ -280,7 +280,7 @@
   [feature = 'leisure_dog_park'] {
     [zoom >= 10] {
       polygon-fill: @grass;
-      polygon-opacity: .5;
+    //polygon-opacity: .5;
       line-color: #e0e0e0;
       line-width: 1;
       [way_pixels >= 4]  { polygon-gamma: 0.75; }
@@ -297,7 +297,7 @@
 
   [feature = 'leisure_golf_course'][zoom >= 12] {
     polygon-fill: @golf_course;
-    polygon-opacity: .5;
+  //polygon-opacity: .5;
     line-color: #e0e0e0;
     line-width: 1;
     [way_pixels >= 4]  { polygon-gamma: 0.75; }
@@ -306,7 +306,7 @@
 
   [feature = 'leisure_miniature_golf'][zoom >= 15] {
     polygon-fill: @golf_course;
-    polygon-opacity: .5;
+  //polygon-opacity: .5;
     line-color: #e0e0e0;
     line-width: 1;    
     [way_pixels >= 4]  { polygon-gamma: 0.75; }
@@ -380,7 +380,7 @@
   [feature = 'landuse_grass'][zoom >= 5],
   [feature = 'landuse_village_green'][zoom >= 5] {
     polygon-fill: @grass;
-    polygon-opacity: .15;
+  //polygon-opacity: .15;
     line-color: #e0e0e0;
     line-width: 1;
     [way_pixels >= 4]  { polygon-gamma: 0.75; }
@@ -582,7 +582,7 @@
 
   [feature = 'wetland_reedbed'][zoom >= 10] {
     polygon-fill: @grass;
-    polygon-opacity: .15;
+  //polygon-opacity: .15;
     line-color: #e0e0e0;
     line-width: 1;
     [way_pixels >= 4]  { polygon-gamma: 0.75; }
@@ -604,7 +604,7 @@
   [feature = 'wetland_marsh'] {
     [zoom >= 10] {
       polygon-fill: @grass;
-      polygon-opacity: .15;
+    //polygon-opacity: .15;
       line-color: #e0e0e0;
       line-width: 1;
       [feature = 'wetland_saltmarsh'][zoom >= 13] {
@@ -671,7 +671,7 @@
   [feature = 'amenity_police'][zoom >= 13] {
     polygon-fill: #ffffff;
     line-color: #e0e0e0;
-    line-opacity: 0.24;
+  //line-opacity: 0.24;
     line-width: 1.0;
     line-offset: -0.5;
     [zoom >= 15] {
