@@ -500,7 +500,7 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
       line-color: #cecece;
       line-width: .75;
       [boundary = 'aboriginal_lands'] {
-        line-color: @aboriginal;
+      //line-color: @aboriginal;
       }
 /*      
       // inner line
