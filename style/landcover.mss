@@ -366,10 +366,8 @@
   [feature = 'landuse_greenhouse_horticulture'] {
     [zoom >= 5] {
       polygon-fill: @farmland;
-      [zoom >= 16] {
-        line-width: .5;
-        line-color: @farmland-line;
-      }
+      line-color: @farmland-line;
+      line-width: 1;
       [way_pixels >= 4]  { polygon-gamma: 0.75; }
       [way_pixels >= 64] { polygon-gamma: 0.3;  }
     }
