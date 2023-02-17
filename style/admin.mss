@@ -502,11 +502,10 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
       [boundary = 'aboriginal_lands'] {
       //line-color: @aboriginal;
       }
-/*      
       // inner line
+      [zoom >= 12] {
       ::wideline {
-        opacity: 0.15;
-        line-width: 3.6;
+      //opacity: 0.5;
         // Unlike planet_osm_line, planet_osm_polygon does not preserves the
         // original direction of the OSM way: Following OGS at
         // https://www.opengeospatial.org/standards/sfa always at the left
@@ -515,6 +514,8 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
         // line-offset is always an offset to the inner side of the polygon.
         line-offset: -0.9;
         line-color: #cecece;
+        line-width: 1.5;
+        line-opacity: .5;
         [boundary = 'aboriginal_lands'] {
           line-color: @aboriginal;
         }
@@ -529,6 +530,8 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
           line-offset: -2;
         }
       }
+      }
+/*
       // outer line
       ::narrowline {
         opacity: 0.15;
