@@ -468,10 +468,7 @@
   [feature = 'power_plant'][zoom >= 10],
   [feature = 'power_generator'][zoom >= 10],
   [feature = 'power_substation'][zoom >= 13] {
-    polygon-fill: @industrial;
-    [zoom >= 15] {
-      polygon-fill: @power;
-    }
+    polygon-fill: #e6e6e6;
     [zoom >= 16] {
       line-width: 0.5;
       line-color: @power-line;
