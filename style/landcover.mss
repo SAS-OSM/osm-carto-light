@@ -50,7 +50,7 @@
 @leisure: @grass;
 @power: #e6e6e6;
 @power-line: #c1c1c1;
-@sand: desaturate(#f5e9c6, 100%);
+@sand: #f4f4f4;
 @societal_amenities: #ffffff;   // Lch(99,13,109)
 @tourism: @campsite;
 @quarry: desaturate(#c5c3c3, 100%);
@@ -550,6 +550,8 @@
 
   [feature = 'natural_sand'][zoom >= 10] {
     polygon-fill: @sand;
+    line-color: #e0e0e0;
+    line-width: 1;
     [way_pixels >= 4]  { polygon-gamma: 0.75; }
     [way_pixels >= 64] { polygon-gamma: 0.3;  }
   }
