@@ -500,7 +500,7 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
       line-color: #cecece;
       line-width: .75;
       [boundary = 'aboriginal_lands'] {
-      //line-color: @aboriginal;
+        line-color: #b7b7b7;
       }
       // inner line
       [zoom >= 12] {
@@ -517,7 +517,7 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
         line-width: 1.5;
         line-opacity: .5;
         [boundary = 'aboriginal_lands'] {
-          line-color: @aboriginal;
+          line-color: #b7b7b7;
         }
         line-join: round;
         line-cap: round;
