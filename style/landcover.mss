@@ -312,8 +312,9 @@
     [way_pixels >= 4]  { polygon-gamma: 0.75; }
     [way_pixels >= 64] { polygon-gamma: 0.3;  }
   }
-/*
+
   [feature = 'landuse_allotments'] {
+    line-width: 0;
     [zoom >= 10] {
       polygon-fill: @allotments;
       [way_pixels >= 4]  { polygon-gamma: 0.75; }
@@ -322,19 +323,19 @@
     [zoom >= 13] {
       polygon-pattern-file: url('symbols/allotments.png');
       polygon-pattern-alignment: global;
+      polygon-pattern-opacity: .5;
       [way_pixels >= 4]  { polygon-pattern-gamma: 0.75; }
       [way_pixels >= 64] { polygon-pattern-gamma: 0.3;  }
     }
     [zoom >= 16] {
     //line-width: 0.5;
-      line-width: 0;
       line-color: desaturate(darken(@allotments, 10%), 10%);
       [name != null] {
         line-width: 0.7;
       }
     }
   }
-*/
+
   // This color is slightly different from @land-color (#faf8ed).
   [feature = 'natural_coastline'] { polygon-fill: desaturate(#f6f3e9, 100%); }
 
