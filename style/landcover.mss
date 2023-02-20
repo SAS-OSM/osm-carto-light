@@ -365,7 +365,7 @@
 
   [feature = 'landuse_farmland'],
   [feature = 'landuse_greenhouse_horticulture'] {
-    [zoom >= 5] {
+    [zoom >= 13] {
       polygon-fill: @farmland;
       line-color: @farmland-line;
       line-width: 1;
@@ -374,10 +374,10 @@
     }
   }
 
-  [feature = 'natural_grassland'][zoom >= 5],
-  [feature = 'landuse_meadow'][zoom >= 5],
-  [feature = 'landuse_grass'][zoom >= 5],
-  [feature = 'landuse_village_green'][zoom >= 5] {
+  [feature = 'natural_grassland'][zoom >= 13],
+  [feature = 'landuse_meadow'][zoom >= 13],
+  [feature = 'landuse_grass'][zoom >= 13],
+  [feature = 'landuse_village_green'][zoom >= 13] {
     polygon-fill: @grass;
   //polygon-opacity: .15;
     line-color: #e0e0e0;
