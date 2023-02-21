@@ -43,11 +43,11 @@
       line/line-width: 1;
       line/line-join: round;
       line/line-cap: round;
-      line/line-color: #808080;
+      line/line-color: #c4c4c4;
 
       dash/line-width: 4;
       dash/line-join: round;
-      dash/line-color: black;
+      dash/line-color: #a6a6a6;
       dash/line-dasharray: 1,30;
       dash/line-clip: false;
     }
