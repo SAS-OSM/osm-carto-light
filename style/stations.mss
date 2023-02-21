@@ -20,7 +20,7 @@
 
   [railway = 'station'][zoom >= 12] {
     marker-file: url('symbols/square.svg');
-    marker-fill: @station-color;
+    marker-fill: #8c8c8c;
     marker-clip: false;
     [station != 'subway'] {
       marker-width: 4;
@@ -52,7 +52,7 @@
   [railway = 'halt'] {
     [zoom >= 13] {
       marker-file: url('symbols/square.svg');
-      marker-fill: @station-color;
+      marker-fill: #8c8c8c;
       marker-width: 4;
       marker-clip: false;
       [zoom >= 15] {
@@ -75,7 +75,7 @@
   [aerialway = 'station']::aerialway {
     [zoom >= 13] {
       marker-file: url('symbols/square.svg');
-      marker-fill: @station-color;
+      marker-fill: #8c8c8c;
       marker-width: 4;
       marker-clip: false;
     }
@@ -98,7 +98,7 @@
   [railway = 'tram_stop'] {
     [zoom >= 14] {
       marker-file: url('symbols/square.svg');
-      marker-fill: @station-color;
+      marker-fill: #8c8c8c;
       marker-width: 4;
       marker-clip: false;
       [zoom >= 15] {

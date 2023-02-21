@@ -147,7 +147,7 @@
   [feature = 'highway_bus_stop'] {
     [zoom >= 16] {
       marker-file: url('symbols/square.svg');
-      marker-fill: @transportation-icon;
+      marker-fill: #8c8c8c;
       marker-width: 6;
       marker-clip: false;
     }
@@ -1390,6 +1390,7 @@
 
   [feature = 'natural_cave_entrance'][zoom >= 15] {
     marker-file: url('symbols/natural/cave.svg');
+    marker-fill: #8c8c8c;
     marker-clip: false;
   }
 
