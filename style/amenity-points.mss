@@ -19,7 +19,7 @@
 @advertising-grey: @man-made-icon;
 @barrier-icon: #757575;
 @landform-color: #757575;
-@leisure-green: #5b5b5b;
+@leisure-green: #757575;
 @protected-area: #5b5b5b;
 @aboriginal: #5b5b5b;
 @religious-icon: #757575;
