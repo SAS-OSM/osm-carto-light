@@ -6,12 +6,12 @@
       line/line-width: 1;
       line/line-join: round;
       line/line-cap: round;
-      line/line-color: #808080;
+      line/line-color: #c4c4c4;
 
       dash/line-width: 3;
       dash/line-join: round;
       dash/line-cap: round;
-      dash/line-color: black;
+      dash/line-color: #a6a6a6;
       dash/line-dasharray: 0.4,13;
       dash/line-clip: false;
     }
