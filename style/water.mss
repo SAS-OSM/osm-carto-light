@@ -1,6 +1,6 @@
 @water-text: #5b5b5b;
-@glacier: @water-color;
-@glacier-line: #9d9d9d;
+@glacier: #eeeeee;
+@glacier-line: #c5c5c5;
 
 @waterway-text-repeat-distance: 200;
 
@@ -8,13 +8,13 @@
   [natural = 'glacier']::natural {
     [zoom >= 5] {
       polygon-fill: @glacier;
-      [zoom >= 7] {
-        line-width: 1.0;
+      [zoom >= 8] {
+        line-width: 0.5;
         line-color: @glacier-line;
       }
-      [zoom >= 10] {
+      [zoom >= 11] {
         line-dasharray: 4,2;
-        line-width: 1.5;
+        line-width: 1;
       }
     }
   }
