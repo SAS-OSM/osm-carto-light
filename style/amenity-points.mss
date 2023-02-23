@@ -1457,7 +1457,7 @@
       [feature = 'amenity_parking_entrance']["parking"='multi-storey'] { marker-file: url('symbols/amenity/parking_entrance_multistorey.svg'); }
       marker-clip: false;
       marker-fill: @transportation-icon;
-      [access != ''][access != 'permissive'][access != 'yes'] { marker-opacity: 0.33; }
+      [access != ''][access != 'permissive'][access != 'yes'] { marker-opacity: 1.0; }
     }
   }
 }
@@ -2992,8 +2992,8 @@
       text-halo-radius: @standard-halo-radius;
       text-halo-fill: @standard-halo-fill;
       [access != ''][access != 'permissive'][access != 'yes'] {
-        text-opacity: 0.33;
-        text-halo-radius: 0;
+      //text-opacity: 0.33;
+      //text-halo-radius: 0;
       }
       [feature = 'amenity_bicycle_parking'],
       [feature = 'amenity_motorcycle_parking'] { text-dy: 12; }
