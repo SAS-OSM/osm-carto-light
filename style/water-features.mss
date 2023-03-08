@@ -73,7 +73,7 @@
     }
     #piers-line {
       line-width: 0.5;
-      line-color: #d6d6d6;
+      line-color: #ababab;
       line-cap: square;
       [zoom >= 13] { line-width: 1; }
       [zoom >= 15] { line-width: 2; }
